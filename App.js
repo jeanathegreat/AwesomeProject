@@ -74,12 +74,12 @@ const App: () => Node = () => {
     };
 
     this.yearsOld = function() {
-      return 'I am ' + this.age + ' years old!';
+      return this.age;
     };
   }
 
-  const newPerson = new Person('Jeana', 'Talle', 28);
-  const titlePerson = 'Learn more about ' + newPerson.fullName + ' who is already ' + newPerson.yearsOld + ' yrs old!';
+  const newPerson = new Person('Karen', 'Kim', 13);
+  var titlePerson = 'Learn more about ' + newPerson.fullName() + ' who is already ' + newPerson.yearsOld() + ' yrs old!';
   
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
   },
 });
 
-alert("Hi Jeana lol");
+//Jnotes: this is how you add an alert
+alert("Hi Karen lol");
 
 export default App;
